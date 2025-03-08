@@ -28,6 +28,8 @@ El repositorio está organizado de la siguiente manera:
 - **CSS3**: Estilos visuales, incluyendo variables CSS para facilitar la personalización del tema.
 - **JavaScript (Opcional)**: Si se decide implementar funcionalidades interactivas más avanzadas en futuras versiones.
 
+## Test 3WC
+A la hora de pasar los test de validacion en W3C me han dado todos los fichero libre de errores tanto los html como el css. 
 ## Instalación y Uso
 
 Para poner en marcha el proyecto localmente, sigue estos pasos:
