@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><img src="assets/images/logo-portfolio.webp" alt="logo de la pagina" class="logo__image"></div>
+
+        <nav class="nav">
+            <ul class="nav__list">
+               <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+               <li class="nav__item"><a href="about.html" class="nav__link">Sobre Mi</a></li>
+               <li class="nav__item"><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+               <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main  class="main">
+        <section class="contacto">
+            <h1 class="contacto__titulo">Contáctame</h1>
+            <p class="contacto__descripcion">Si tienes alguna pregunta o deseas trabajar conmigo, envíame un mensaje.</p>
+            <form action="#" method="post" class="contacto__form">
+
+                <label for="name" class="contacto-form__label">Nombre:</label>
+                <input type="text" id="name" name="name" required class="contacto-form__input">
+
+                <label for="email" class="contacto-form__label">Correo Electrónico:</label>
+                <input type="text" id="email" name="email" required class="contacto-form__input">
+
+                <label for="opciones" class="contacto-form__label">Asunto:</label>
+               <select name="opciones" id="opciones" class="contacto-form__select">
+                <option value="consulta">Consulta general</option>
+                <option value="proyecto">Propuesta de Proyecto</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="otros">Otros</option>
+               </select>
+
+               <label for="mensaje" class="contacto-form__label">Mensaje:</label>
+               <textarea name="mensaje" id="mensaje" rows="5" class="contacto-form__textarea"></textarea>
+
+               <button type="submit" class="contacto-form__button">Enviar Mensaje</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__info">© 2025 Jose Salazar. Todos los derechos reservados.</div>
+    </footer>
+</body>
+</html>
