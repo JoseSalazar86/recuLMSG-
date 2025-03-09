@@ -235,7 +235,7 @@ input:checked + .theme-toggle__label:before {
     margin-top: 10px;
 }
 
-/* TESTIMONIOS */
+/* TESTIMONIOS INDEX*/
 
 .testimonios{
     padding: 80px 50px;
@@ -254,14 +254,14 @@ input:checked + .theme-toggle__label:before {
     margin-top: 30px;
 }
 
-.testimonio{
-    background:var(--color-caja);
+.testimonio {
+    background: var(--color-caja);
     padding: 20px;
     border-radius: 8px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 30%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
-
 .testimonio__texto{
     font-style: italic;
 }
@@ -536,7 +536,105 @@ input:checked + .theme-toggle__label:before {
 .contacto-form__button:hover{
     background-color: var(--color-link-hover);
 }
+/* TESTIMONIALS */
+.testimonials__container {
+    display: flex;
+    justify-content: space-between ; 
+    gap: 20px;
+    flex-wrap: wrap; 
+    margin: 20px 0;
+    padding: 10px;
+}
 
+/* FORMULARIO */
+.testimonial-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    left: 35%;
+    width: 30%;
+}
+
+.testimonial-form__textarea,
+.testimonial-form__input {
+    padding: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+    background-color: var(--color-caja);
+    color: var(--color-texto);
+}
+
+.testimonial-form__textarea {
+    resize: none;
+    height: 100px;
+}
+
+.testimonial-form__button {
+    padding: 12px 20px;
+    background-color: var(--color-link);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 33.3%;
+}
+
+.testimonial-form__button:hover {
+    background-color: var(--color-link-hover);
+}
+
+/* BOTONES DE NAVEGACIÓN */
+.testimonials__nav-button {
+    align-items: center;
+    padding: 12px 20px;
+    background-color: var(--color-link);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 10px;
+    position: relative;
+    left: 45%;
+}
+
+.testimonials__nav-button:hover {
+    background-color: var(--color-link-hover);
+}
+
+/* BOTÓN DE ELIMINAR */
+.testimonials__delete-button {
+    padding: 12px 20px;
+    background-color: red;
+    color: var(--color-texto);
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 50.5%;
+    top: 63.2%;
+    width: 14.5%;
+    
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20%;
+}
+
+.testimonials__delete-button:hover {
+    background-color: darkred;
+}
+
+/*TITULO TESTIMONIO*/
+.testimonials__title{
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    text-align: center;
+    margin: 20px;
+}
 /* FOOTER */
 
 .footer{
@@ -621,6 +719,9 @@ input:checked + .theme-toggle__label:before {
     .presentacion__accion, .about__link, .contactar__boton, .portfolio__item-link, .contacto-form__button {
         padding: 10px 15px;
         font-size: 0.9rem;
+    }
+    .testimonials__container {
+        flex-direction: column;
     }
 }
 

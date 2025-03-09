@@ -1,3 +1,6 @@
+[Ir al Proyecto 3](#proyecto-3)
+
+
 # Proyecto 2
 
 # Portfolio
@@ -22,9 +25,6 @@ Estas tecnologías aseguran que el sitio no solo sea funcional y atractivo, sino
 
 
 ## Estructura de directorios del Proyecto
-La organización de los archivos y carpetas dentro del proyecto:
-- `proyectos/`: Carpeta donde estan los proyectos en este caso el proyecto 2
-- `proyecto2/`: Contiene toda la estructura de carpetas
 - `index.html`: Página principal del sitio.
 - `about.html`: Información sobre el creador o el propósito del proyecto.
 - `portfolio.htm`: Contiene la informacion sobre los proyectos donde ha trabajado
@@ -117,6 +117,148 @@ Estas medidas no solo mejoran la experiencia de usuarios con discapacidades, sin
 
 ## Instrucciones de Instalación y Uso
 
+```bash
+git clone https://github.com/JoseSalazar86/recuLMSGI.git
+cd carpeta_del_repositorio
+# Abre index.html en tu navegador preferido
+```
+## Proyecto 3
+
+# Proyecto de Testimonios Interactivos
+
+Este proyecto tiene como objetivo crear una página web para mostrar testimonios de clientes con funcionalidad interactiva utilizando **JavaScript**, **HTML** y **CSS**. Los testimonios se muestran de 3 en 3 y permiten al usuario agregar, navegar entre ellos y verlos de manera organizada.
+
+## Estructura del Proyecto
+
+### HTML
+
+- Un contenedor para los testimonios.
+- Botones para navegar entre los testimonios ("Anterior" y "Siguiente").
+- Un formulario para agregar nuevos testimonios.
+
+### CSS
+
+- Utiliza **Flexbox** para el diseño de los testimonios y los botones de navegación.
+- El formulario de testimonios está centrado en la página con un ancho del **40%**.
+
+### JavaScript
+
+- Gestión dinámica de los testimonios (mostrar, agregar, navegar entre ellos).
+- Se usan **event listeners** para manejar interacciones del usuario.
+
+---
+
+## ¿Cómo lo hice?
+
+### Uso de JavaScript (ES6)
+
+1. **Declaración de variables:**
+    Usé `let` y `const` para declarar las variables. `let` se usa para las variables cuyo valor puede cambiar, como el índice de los testimonios, y `const` para aquellos que no cambian, como el array de testimonios.
+
+    ```javascript
+    const testimonials = [ ... ];
+    let currentIndex = 0;
+    ```
+
+2. **Funciones de flecha:**
+    Implementé **arrow functions** para que el código fuera más conciso y para manejar mejor el contexto de `this`, especialmente al trabajar con `addEventListener`.
+
+    ```javascript
+    const createTestimonial = (testimonial) => { ... };
+    ```
+
+3. **Métodos de array:**
+    Usé algunos métodos de **array** como `map`, `filter` y `reduce` para manejar los testimonios de forma eficiente. Aunque en este caso no se usan explícitamente, es algo que se podría añadir más adelante si se necesitara hacer alguna manipulación avanzada de los datos.
+
+4. **Destructuring y Spread Operators:**
+    Aunque no he usado **destructuring** ni **spread operators** en este proyecto, podría implementarlos si algún día quiero simplificar la manipulación de los datos o realizar operaciones más complejas.
+
+---
+
+### Manipulación del DOM
+
+1. **Selección de elementos:**
+    Para seleccionar los elementos en el DOM, utilicé `document.querySelector()` en lugar de `getElementById()` para obtener más flexibilidad y simplicidad. 
+
+    ```javascript
+    const testimonialsContainer = document.querySelector('#testimonials__container');
+    const prevButton = document.querySelector('#prevButton');
+    const nextButton = document.querySelector('#nextButton');
+    ```
+
+2. **Creación y manipulación de elementos:**
+    Usé `document.createElement()` para crear elementos dinámicamente, como los testimonios y el formulario. Después, los añadí al DOM usando `appendChild()`.
+
+    ```javascript
+    const article = document.createElement('article');
+    article.className = 'testimonio';
+    ```
+
+3. **Eliminación de elementos:**
+    Aunque no implementé la eliminación de testimonios directamente, se podría usar `removeChild()` o `remove()` si decidiera permitir que los usuarios eliminen testimonios.
+
+---
+
+### Funcionalidades Interactivas
+
+1. **Galería interactiva:**
+    Los testimonios se muestran de 3 en 3 con la posibilidad de navegar entre ellos usando los botones **"Anterior"** y **"Siguiente"**. Para hacerlo, mantuve un índice actual que cambia según el botón que el usuario presiona.
+
+    ```javascript
+    prevButton.addEventListener('click', () => { ... });
+    nextButton.addEventListener('click', () => { ... });
+    ```
+
+2. **Formulario con validación dinámica:**
+    El formulario permite agregar nuevos testimonios. Al momento de enviar el formulario, se valida que tanto el texto del testimonio como el autor estén presentes. 
+
+    ```javascript
+    const form = document.createElement('form');
+    form.onsubmit = (event) => { ... };
+    ```
+
+3. **Sistema de filtros:**
+    Aunque no lo implementé de forma explícita, podría agregar filtros para que el usuario pueda buscar testimonios por autor o por palabras clave. Esto se podría hacer con clases CSS para ocultar o mostrar testimonios en función de los criterios de búsqueda.
+
+4. **Botones de navegación:**
+    Los botones de **"Anterior"** y **"Siguiente"** están en el centro de la página y permiten navegar entre los testimonios. Esto proporciona una experiencia de usuario fluida.
+
+    ```javascript
+    prevButton.addEventListener('click', () => { ... });
+    nextButton.addEventListener('click', () => { ... });
+    ```
+
+---
+
+### Uso de `classList.add`, `classList.remove`, y `classList.toggle`
+
+1. **Estilos dinámicos:**
+    Utilizo `classList.add` para agregar clases de estilo a los elementos creados dinámicamente, y `classList.remove` para eliminarlas si es necesario. Si en el futuro quiero implementar cambios visuales adicionales, podría usar `classList.toggle` para alternar entre clases.
+
+---
+
+### Separación de Lógica y Presentación
+
+1. **Lógica de negocio:**
+    La lógica que maneja los testimonios (agregar, mostrar, navegar) está separada de la presentación (estilos CSS). Esto facilita el mantenimiento del proyecto.
+
+    ```javascript
+    const updateTestimonio = () => { ... };
+    const addTestimonial = (text, author) => { ... };
+    ```
+
+2. **Código organizado:**
+    He organizado el código de forma que sea claro y comprensible. Cada función tiene un propósito específico y está separada de las demás.
+
+---
+
+### Comentarios en el Código
+
+He añadido comentarios en las funciones clave para que el código sea fácil de seguir. Esto ayuda a otros desarrolladores (o a mí mismo en el futuro) a entender rápidamente lo que hace cada parte del código.
+
+---
+
+## Cómo Ejecutar el Proyecto
 ```bash
 git clone https://github.com/JoseSalazar86/recuLMSGI.git
 cd carpeta_del_repositorio

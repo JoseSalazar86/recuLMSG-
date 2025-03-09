@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina de testimonios clientes">
+    <title>Testimonios Clientes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/images/logo-portfolio-optimizada.jpg" alt="logo de la pagina" class="header__logo-image">
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link">Sobre Mi</a></li>
+                <li class="nav__item"><a href="portfolio.html" class="nav__link">Portfolio</a></li>
+                <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="testimonials__title">Testimonios</h1>
+
+        <!-- Testimonios -->
+        <section id="testimonials__container" class="testimonials__container"></section>
+         <!-- Botones de navegación -->
+         <button id="prevButton" class="testimonials__nav-button">Anterior</button>
+         <button id="nextButton" class="testimonials__nav-button">Siguiente</button>
+         
+        <!-- Formulario para agregar testimonios -->
+        <form id="testimonial-form" class="testimonial-form">
+            <textarea id="testimonial-text" class="testimonial-form__textarea" placeholder="Escribe tu testimonio..." required></textarea>
+            <input type="text" id="author-name" class="testimonial-form__input" placeholder="Tu nombre" required />
+            <button type="submit" class="testimonial-form__button">Añadir Testimonio</button>
+        </form>
+
+        <!-- Botón para borrar el último testimonio -->
+        <button id="delete-button" class="testimonials__delete-button">Borrar Último Testimonio</button>
+
+       
+    </main>
+
+    <footer class="footer">
+        <div class="footer__info">© 2025 Jose Salazar. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
