@@ -11,7 +11,7 @@ Este proyecto lo he construido exclusivamente con **HTML5** y **CSS3**, aprovech
 
 ### HTML5
 - **Uso de Etiquetas Semánticas**: Implementación de `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, y `<footer>` para estructurar el contenido de forma lógica y accesible.
-- **Formularios HTML5**: Utilización de tipos de entrada como `email` y `number` para mejorar la validación de formularios.
+- **Formularios HTML5**: Utilización de tipos de entrada como `email` para mejorar la validación de formularios.
 
 ### CSS3
 - **Flexbox y Grid**: Empleados para crear layouts responsivos que se adaptan a diferentes tamaños de pantalla.
